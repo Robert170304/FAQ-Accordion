@@ -18,9 +18,9 @@ html {
 }
 
 body {
-    min-height: 100vh;
-    margin: 0;
-    padding: 10rem 1rem;
+   /* min-height: 100vh; */
+   margin: 150px -30px 0px -30px;
+    /* padding: 10rem 1rem; */
     font-family: 'Kumbh Sans', sans-serif;
     background-image: linear-gradient(
         var(--gradient-violet), 
@@ -143,8 +143,16 @@ h1{
 /* for desktop */
 @media (min-width: 56em) {
     
-    body{
+   body{
         padding: 5rem;
+        min-height: 100vh;
+        margin: 0;
+        padding: 10rem 1rem;
+        font-family: 'Kumbh Sans', sans-serif;
+        background-image: linear-gradient(
+            var(--gradient-violet), 
+            var(--gradient-blue));
+        color: var(--text-blue);
     }
     .card{
       position: relative;
