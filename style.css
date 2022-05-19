@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    /*### Primary*/
+    --Very-Dark-Blue: hsl(243, 87%, 12%);
+    --Desaturated-Blue: hsl(238, 22%, 44%);
+
+    /*### Accent*/
+    --Bright-Blue: hsl(224, 93%, 58%);
+    --Moderate-Cyan: hsl(170, 45%, 43%);
+
+    /*### Neutral*/
+    --Light-Grayish-Blue: hsl(240, 75%, 98%);
+    --Light-Gray: hsl(0, 0%, 75%);
+}
+
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+h1,input, button{
+    font-family: 'Raleway', sans-serif;
+}
+button {
+    cursor: pointer;
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.1);
+}
+button:hover{
+    opacity: 0.9;
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    padding: 40px 30px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Raleway', sans-serif;
+}
+.logo-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.logo-container img{
+    width: 150px;
+}
+nav{
+    width: 50%;
+}
+.nav-links{
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 600;;
+}
+.nav-links a{
+    color: var(--Desaturated-Blue)
+}
+
+.hero, .site-details{
+    margin: 50px 0;
+}
+.hero, .site-details, .sign-up{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+.text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+.text-container h1, .site-info h1{
+    color: var(--Very-Dark-Blue);
+    font-size: xx-large;
+    line-height: 40px;
+    width: 90%;
+    margin: 4% 0;
+}
+.text-container p, .site-info p{
+    color: var(--Very-Dark-Blue);
+    margin: 0;
+    width: 90%;
+    font-weight: 500;
+}
+.text-container .email-form{
+    display: flex;
+    margin: 10px 0;
+    width: 90%;
+    border: 1px solid;
+}
+ .invalid-email{
+     display: none;
+    border: 1px solid;
+}
+.text-container .email-form button{
+    border: none;
+    border-radius: 3px;
+    padding: 10px 55px;
+    margin: 0 20px;
+    color: var(--Light-Grayish-Blue);
+    background-color: var(--Bright-Blue);
+}
+.text-container .email-form input{
+    width: 50%;
+    border: 1px solid var(--Very-Dark-Blue);
+    border-radius: 2px;
+    padding: 0 10px;
+    font-size: medium;
+    outline: none;
+}
+.illustration-img{
+    display: flex;
+    justify-content: center;
+}
+.illustration-img img{
+    width: 80%;
+}
+
+.site-details{
+    background-image: url(./images/bg-curve-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    padding: 40px;
+    margin: 10px 0;
+}
+.site-info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.site-info .text-details{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.site-info .page-link{
+    display: flex;
+    align-items: center;
+}
+.site-info .page-link a{
+    font-weight: 500;
+    color: var(--Moderate-Cyan);
+    border-bottom: 1px solid var(--Moderate-Cyan);
+}
+.site-info .page-link a:hover{
+    opacity: 0.6;
+}
+.site-info .page-link svg{
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: var(--Moderate-Cyan);
+}
+.site-info .testimonials{
+    border-radius: 7px;
+    box-shadow:  0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 25px;
+    background-color: #fff;
+    width: 50%;
+}
+.testimonials .client-id {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.site-info .testimonials .review{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--Desaturated-Blue);
+}
+.testimonials .client-id img{
+    width: 40px;
+    border-radius: 50%;
+}
+.testimonials .client-id .client-info{
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+.client-id .client-info .client-name{
+    font-weight: bold;
+    color: var(--Very-Dark-Blue);
+}
+.client-id .client-info .client-profession{
+    font-size: small;
+}
+
+.sign-up{
+    padding: 40px;
+    background-color: var(--Desaturated-Blue);
+    color: var(--Light-Grayish-Blue);
+}
+.sign-up .signUp-details{
+}
+.signUp-details p{
+    width: 70%;
+    font-size: 14px;
+}
+.sign-up .formDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sign-up form{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+.sign-up form input{
+    width: calc(100% - 10%);
+    height: 40px;
+    margin: 0;
+    border: 1px solid var(--Very-Dark-Blue);
+    border-radius: 2px;
+    padding: 0 10px;
+    font-size: small;
+    outline: none;
+}
+.sign-up form button{
+    width: 40%;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 25px;
+    color: var(--Light-Grayish-Blue);
+    background-color: var(--Bright-Blue);
+}
+
+footer{
+    display: grid;
+    grid-template-areas:
+        'footer-logo footer-logo footer-logo'
+        'contact links icons';
+    gap: 10px;
+    background-color: var(--Very-Dark-Blue);
+    color: aliceblue;
+    padding: 30px;
+}
+footer .footer-logo{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    grid-area: footer-logo;
+}
+footer .contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 20px;
+    padding: 20px;
+    color: var(--Light-Gray);
+    font-size: small;
+    font-weight: 600;
+    grid-area: contact;
+}
+.contact-details div{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+footer .footer-links{
+    display: flex;
+    justify-content: space-around;
+    row-gap: 20px;
+    font-size: small;
+    font-weight: 600;
+    grid-area: links;
+}
+.footer-links a{
+    color: var(--Light-Gray);
+}
+footer .footer-links ul{
+    padding: 0;
+}
+.footer-links ul li{
+    line-height: 30px;
+    cursor: pointer;
+}
+.footer-links a:hover{
+    color: var(--Light-Grayish-Blue);
+}
+footer .social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    color: var(--Light-Gray);
+    font-size: small;
+    grid-area: icons;
+}
+.social-icons i{
+    margin: 10px;
+    height: inherit;
+    border-radius: 50%;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+.social-icons i:hover{
+    color: var(--Bright-Blue);
+}
+
+@media (max-width: 768px) {
+    header{
+        padding: 20px;
+    }
+    .logo-container{
+        width: 40%;
+        display: flex;
+        align-items: center;
+    }
+    .logo-container img{
+        width: 100px;
+    }
+    nav{
+        width: 60%;
+    }
+    .hero, .site-details{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .hero .text-container h1{
+        font-size: x-large;
+    }
+    .sign-up{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .illustration-img{
+        max-width: 600px;
+    }
+    .text-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 500px;
+        padding: 20px 10px;
+    }
+    .text-container .email-form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 15px;
+        margin: 20px 0;
+        width:90%;
+    }
+    .text-container .email-form input{
+        width: 94%;
+        height: 40px;
+        margin: 0;
+    }
+    .text-container .email-form button{
+        height: 40px;
+        width: 100%;
+        margin: 0;
+    }
+    .site-details{
+        background-image: url(./images/bg-curve-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 20px 10px;
+    }
+    .site-details .site-info .text-details h1{
+        font-size: large;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .text-details p{
+        color: var(--Desaturated-Blue);
+    }
+    .site-info{
+        margin: 20px 5px;
+    }
+    .site-info .page-link {
+        justify-content: center;
+    }
+    .site-info .testimonials{
+        width: auto;
+        margin: 10px;
+    }
+    .site-info .testimonials .review{
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--Desaturated-Blue);
+    }
+    .sign-up {
+        row-gap: 20px;
+        padding: 50px 10px;
+    }
+    .sign-up .signUp-details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .sign-up .signUp-details h1{
+        margin-top: 0;
+    }
+    .sign-up .signUp-details p{
+        margin: 10px;
+        line-height: 20px;
+    }
+    .sign-up .formDiv{
+        width: 100%;
+        flex-direction: column;
+    }
+    .sign-up .formDiv form{
+        width: 80%;
+        align-items: center;
+    }
+    .sign-up .formDiv form input{
+        width: calc(100% - 7%);
+    }
+    .sign-up .formDiv form button{
+        height: 40px;
+        width: 100%;
+        margin: 0;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    footer .footer-links{
+        flex-direction: column;
+        padding: 20px;
+        row-gap: 0;
+    }
+}
